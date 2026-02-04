@@ -1,0 +1,242 @@
+Real-Time Network Threat Detection System Using Machine Learning
+
+
+
+⸻
+
+
+
+Description:
+
+
+
+This project aims to develop a full-stack Intrusion Detection System (IDS) capable of monitoring real-time network traffic and detecting suspicious or malicious activities using Machine Learning.
+
+Traditional IDS solutions rely heavily on signature-based detection, which fails to detect zero-day attacks or new attack patterns. This project overcomes that limitation by using ML-driven anomaly detection and attack classification models.
+
+
+
+The system continuously captures network packets, extracts flow-level features, and analyzes them using trained ML models to identify potential threats such as:
+
+• Port scanning
+
+• DDoS attacks
+
+• Brute-force attempts
+
+• Malware beaconing
+
+• Packet anomalies
+
+• Zero-day behavioral deviations
+
+
+
+The backend performs real-time inference, while the frontend dashboard visualizes threats, statistics, and traffic patterns. The project demonstrates how AI-powered threat detection can be integrated into existing networks without modifying routers or firewalls, making it suitable for small organizations, labs, and security researchers.
+
+
+
+⸻
+
+
+
+Requirements:
+
+
+
+1. Platform Requirements
+
+• Windows / Linux-based Application
+
+• Python backend for ML + packet capture
+
+• React/Next.js (or HTML/CSS/JS) for dashboard
+
+• Docker for deployment (optional)
+
+
+
+
+⸻
+
+
+
+2. Features / Functional Requirements
+
+
+
+Packet Capture Layer
+
+• Capture live packets using:
+
+• Scapy
+
+• PyShark
+
+• Libpcap
+
+• Extract flow statistics:
+
+• Source/Destination IP & Port
+
+• Protocol
+
+• Packet size
+
+• Time intervals
+
+• Flag count (SYN, ACK, FIN)
+
+
+
+ML Model Integration
+
+• Level 1: Anomaly Detection
+
+• Isolation Forest
+
+• One-Class SVM
+
+• Autoencoders
+
+• Level 2: Attack Classification
+
+• Random Forest / XGBoost
+
+• Trained on datasets like CIC-IDS2017, UNSW-NB15
+
+• Level 3: Deep Learning (optional)
+
+• LSTM-based sequential traffic analysis
+
+
+
+Backend API Server
+
+• REST API using FastAPI / Flask
+
+• Endpoints:
+
+• /capture → start capturing
+
+• /predict → model output
+
+• /alerts → send alerts to frontend
+
+• /logs → return historical data
+
+
+
+Dashboard / Frontend
+
+
+
+A GUI to display:
+
+• Live threat alerts
+
+• Traffic graphs
+
+• Map of attacker IPs
+
+• Top ports being scanned
+
+• Packet flow rate
+
+• Attack categories & severity
+
+
+
+Security Actions
+
+• Log detected threats
+
+• Send email alert to admin
+
+• Optionally block IP via:
+
+• Windows firewall commands
+
+• Linux iptables
+
+
+
+⸻
+
+
+
+3. Integration Requirements
+
+
+
+→ ML Model Integration
+
+• Load pre-trained model (.pkl or .h5 format)
+
+• Real-time inference at low latency
+
+
+
+→ Database
+
+• SQLite / PostgreSQL for storing:
+
+• traffic logs
+
+• threat history
+
+• model predictions
+
+
+
+→ WebSockets for Real-Time Dashboard
+
+• Real-time event streaming
+
+• Threat updates appear instantly on UI
+
+
+
+⸻
+
+
+
+4. Security Levels (similar to the format in your sample)
+
+
+
+Level 1: Anomaly-Based Detection (Unsupervised ML)
+
+• Uses behavior deviation
+
+• Detects unknown / zero-day threats
+
+• Highest adaptability
+
+
+
+Level 2: Signature + ML Hybrid Detection
+
+• Match known patterns
+
+• ML confirms the threat
+
+• Balanced mode
+
+
+
+Level 3: ML-Only Attack Classification
+
+• High accuracy for known attacks
+
+• Multi-class prediction
+
+• Lower false positive rate
+
+
+
+Level 4: Standard Packet Monitoring (No ML)
+
+• Only logs and visualizes packets
+
+• Baseline mode for low-resource systems
