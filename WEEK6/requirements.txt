@@ -1,0 +1,41 @@
+# ── Core API ──────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+websockets==12.0
+python-multipart==0.0.9
+
+# ── ML Stack ──────────────────────────────────────────────────────────────
+scikit-learn==1.4.2
+xgboost==2.0.3
+numpy==1.26.4
+pandas==2.2.2
+joblib==1.4.2
+torch==2.3.0          # LSTM deep learning (optional, CPU-only)
+torchvision==0.18.0
+
+# ── Packet Capture ────────────────────────────────────────────────────────
+scapy==2.5.0
+pyshark==0.6           # wrapper around tshark/wireshark
+dpkt==1.9.8            # fast pcap parsing
+
+# ── Database ──────────────────────────────────────────────────────────────
+sqlalchemy==2.0.30
+alembic==1.13.1
+aiosqlite==0.20.0      # async SQLite driver
+asyncpg==0.29.0        # optional PostgreSQL
+
+# ── Security & Alerts ─────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+aiosmtplib==3.0.1      # async email alerts
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+pydantic==2.7.1
+pydantic-settings==2.2.1
+python-dotenv==1.0.1
+httpx==0.27.0
+rich==13.7.1            # CLI pretty output
+loguru==0.7.2
+apscheduler==3.10.4    # background jobs
+geoip2==4.8.0          # IP geolocation
+maxminddb==2.5.2
